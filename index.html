@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mario De La Torre Ochoa</title>
+        <link rel="icon" type="image/png" href="images/favicon.ico"/>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	</head>
+	<body onload="changeweb()">
+		
+		<div class="container">
+			<h1 class="ml11">
+				<span class="text-wrapper">
+					<span class="line line1"></span>
+				</span>
+			</h1>
+			<ul class="blocks">
+				<li class="block-1"></li>
+				<li class="block-2"></li>
+				<li class="block-3"></li>
+				<li class="block-4"></li>
+				<li class="block-5"></li>
+				<li class="block-6"></li>
+			</ul>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+		
+		<script>
+			TweenMax.staggerTo(
+				"li",
+				2,
+				{
+					delay: 0.4,
+					ease: Expo.easeInOut,
+					scaleY: 0.3,
+				},
+				0.1
+			);
+
+			TweenMax.to("li", 2, {
+				delay: 2.8,
+				ease: Expo.easeInOut,
+				width: "10px",
+			});
+
+			TweenMax.staggerTo(
+				"li",
+				1.6,
+				{
+					delay: 4.8,
+					ease: Expo.easeInOut,
+					y: "100%",
+				},
+				0.06
+			);
+
+			function changeweb(){
+				setInterval(change, 6000)
+			}
+
+			function change(){
+				locationObj = document.location
+				document.location.href = 'home.html'
+			}
+
+		</script>
+	</body>
+</html>
